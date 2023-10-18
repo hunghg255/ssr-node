@@ -1,0 +1,23 @@
+<h1>SSR Nodejs</h1>
+
+<div>
+  <button>Decrement</button>
+  <span>0</span>
+  <button>Increment</button>
+</div>
+
+<script defer>
+  document.addEventListener('DOMContentLoaded', () => {
+    const span = document.querySelector('span');
+    const buttons = document.querySelectorAll('button');
+    const [decrement, increment] = buttons;
+
+    decrement.addEventListener('click', () => {
+      span.textContent = parseInt(span.textContent) - 1;
+    });
+
+    increment.addEventListener('click', () => {
+      span.textContent = parseInt(span.textContent) + 1;
+    });
+  });
+</script>
